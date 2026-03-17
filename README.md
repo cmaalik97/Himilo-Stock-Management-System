@@ -74,4 +74,4 @@ The system allows:
 **Abdimalik Mohamud** © 2026  
 
 - WhatsApp: +252 61 7971076  
-- Facebook: Hiigsi Trading Co
+- Facebook: Himilo Hiigsi Trading Co
