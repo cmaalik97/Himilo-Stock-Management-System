@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himilo Stock Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <h1 class="logo">Himilo Stock</h1>
+
+    <!-- hamburger button -->
+     <input type="checkbox" id="menu-toggle">
+     <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+    <nav id="navMenu" class="nav-menu">
+      <a href="#dashboard">Dashboard</a>
+      <a href="#inventory">Inventory</a>
+      <a href="#stockout">Stock Out</a>
+      <a href="#history">History</a>
+    </nav>
+  </div>
+</header>
+
+<!-- DASHBOARD -->
+<section id="dashboard" class="section">
+  <h2>Dashboard</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Total Company Stock</h3>
+      <p id="totalStock">0</p>
+    </div>
+    <div class="card">
+      <h3>Himilo (1) </h3>
+      <p id="branch1Stock">0</p>
+    </div>
+    <div class="card">
+      <h3>Himilo (2)</h3>
+      <p id="branch2Stock">0</p>
+    </div>
+  </div>
+  <!-- <section id="dashboard" class="section"> -->
+
+<h2>Inventory Dashboard</h2>
+
+<div id="itemDashboard" class="dashboard-grid">
+
+<!-- JS will generate cards here -->
+
+</div>
+<!-- 
+</section> -->
+</section>
+
+<!-- INVENTORY -->
+<section id="inventory" class="section">
+  <h2>Add Inventory</h2>
+  <form id="inventoryForm">
+    <input type="text" id="itemName" placeholder="Item Name" required>
+    <input type="number" id="totalQty" placeholder="Total Quantity" required>
+    <input type="number" id="QtyHimilo1" placeholder="Himilo 1 Quantity" required>
+    <input type="number" id="QtyHimilo2" placeholder="Himilo 2 Quantity" required>
+    <input type="file" id="itemImage" accept="image/*">
+    <button type="submit">Add Inventory</button>
+    <p id="errorMsg"></p>
+  </form>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date Added</th>
+        <th>Item</th>
+        <th>Total</th>
+        <th>Himilo 1</th>
+        <th>Himilo 2</th>
+      </tr>
+    </thead>
+    <tbody id="inventoryTable"></tbody>
+  </table>
+</section>
+
+<!-- STOCK OUT -->
+<section id="stockout" class="section">
+  <h2>Stock Out</h2>
+  <form id="stockForm">
+    <select id="itemSelect"></select>
+    <select id="branch">
+      <option value="">Select Branch</option>
+      <option value="branch1">Himilo 1</option>
+      <option value="branch2">Himilo 2</option>
+    </select>
+    <input type="number" id="quantity" placeholder="Quantity" required>
+    <button type="submit">Stock Out</button>
+    <p id="stockMsg"></p>
+  </form>
+</section>
+
+<!-- HISTORY -->
+<section id="history" class="section">
+  <h2>Transaction History</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Item</th>
+        <th>Branch</th>
+        <th>Type</th>
+        <th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody id="historyTable"></tbody>
+  </table>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-info">
+      <h3>Himilo Hiigsi Trading Co</h3>
+      <p>Facebook: <a href="https://www.facebook.com/HiigsiTradingCo" target="_blank">Hiigsi Trading Co</a></p>
+      <p>WhatsApp: <a href="https://wa.me/617971076" target="_blank">+25261 7971076</a></p>
+      <p>Keeping and Arranging Inventory</p>
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2026 Abdimalik Mohamud. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
